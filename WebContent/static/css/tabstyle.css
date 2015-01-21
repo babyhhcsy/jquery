@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* 首页-选项卡 */
+.tabdiv a { color:#333; text-decoration:none; }
+.tabdiv a:hover { color:#3366cc; text-decoration:underline; }
+
+/* tabbtn */
+.tabbtn { height:30px; background:url(../images/tabbg.gif) repeat-x; border-left:solid 1px #ddd; border-right:solid 1px #ddd; }
+.tabbtn li { float:left; position:relative; margin:0 0 0 -1px; }
+.tabbtn li a {display:block;float:left;height:30px;line-height:30px;overflow:hidden;width:80px;text-align:center;font-size:12px;cursor:pointer;}
+.tabbtn li.current { border-left:solid 1px #d5d5d5; border-right:solid 1px #d5d5d5; border-top:solid 1px #c5c5c5;}
+.tabbtn li.current a { border-top:solid 2px #2D66A2; height:27px; line-height:27px; background:#fff; color:#3366cc; font-weight:800; }

@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+.title{padding:10px;}
+.btn{border:none;background:#34495e;color:white;font-size:18.5px;text-decoration:none;}
+.tr-t{border-bottom:1px solid #ccc;line-height:35px;margin-top:1px;}
+.annotition{padding:4px; background-color:#3412e;}
+b{color:#c52122;}
+label{padding:5px;}
+.text-area textarea{border-color:#ccc; font-size:14px;}
+.tr-input{width:150px;display:initial;}
+.tr-select{width:150px;display:initial;font-weight:bold;height:34px;}
+.sub_btn{font-size:18px;line-height:30px;float:center;}

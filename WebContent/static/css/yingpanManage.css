@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+.tr-title{padding:10px;}
+.btn{border:none;background:#34495e;color:white;font-size:18.5px;text-decoration:none;}
+.text-input{width:150px;display:block;}
+label{display:block;}
+.tr-td{border:1px solid #ccc;}
+.td-title{background-color:#e9e9e9;}

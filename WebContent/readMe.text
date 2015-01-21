@@ -1,0 +1,7 @@
+ 在使用js中虽然有jquery提供的校验类，但是总是会遇到js冲突的情况；或者js的校验能力比较弱；所以这里我们通过添加自定的校验的方式来增强校验能力
+先看下使用方式：
+在页面中配置如下的信息，主要是配置class
+<input type="text" id="fundName" name="fundName" class="form-control validate[required]" style="width: 250px;" maxlength="50">
+<input type="text" id="fundName" name="fundName" class="form-control validate[required,custome[isNumberOr_OrLetterFirst]]" style="width: 250px;" maxlength="50">
+
+然后在引入JSFrameWork就可以完成校验

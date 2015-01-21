@@ -1,0 +1,52 @@
+
+form.formular {
+	margin: 0px auto; padding: 20px; border: 1px solid rgb(165, 168, 184); width: 300px; font-family: tahoma, verdana, "sans-serif"; font-size: 12px;
+}
+.formular fieldset {
+	padding: 15px; border: 1px solid rgb(181, 184, 200); margin-top: 20px;
+}
+.formular legend {
+	color: rgb(21, 66, 139); font-size: 12px; font-weight: 900;
+}
+.formular fieldset label {
+	width: auto; text-align: inherit; float: none; display: block;
+}
+.formular label span {
+	color: rgb(0, 0, 0);
+}
+.formular input {
+	margin-bottom: 5px; display: block;
+}
+.formular select {
+	margin-bottom: 5px; display: block;
+}
+.formular textarea {
+	margin-bottom: 5px; display: block;
+}
+.formular .text-input {
+	background: repeat-x rgb(255, 255, 255); padding: 4px; border: 1px solid rgb(181, 184, 200); width: 250px; color: rgb(85, 85, 85); font-size: 14px; margin-top: 4px;
+}
+.formular textarea {
+	background: repeat-x rgb(255, 255, 255); padding: 4px; border: 1px solid rgb(181, 184, 200); width: 250px; height: 70px; color: rgb(85, 85, 85); font-size: 14px; margin-top: 4px;
+}
+.formular .infos {
+	background: rgb(255, 255, 255); padding: 10px; color: rgb(51, 51, 51); font-size: 12px; margin-bottom: 10px;
+}
+.formular span.checkbox {
+	display: inline;
+}
+.formular .checkbox {
+	display: inline;
+}
+.formular .radio {
+	display: inline;
+}
+.formular .submit {
+	padding: 4px; border: 1px solid rgb(170, 170, 170); text-decoration: none; margin-top: 20px; float: right; cursor: pointer;
+}
+.formular hr {
+	clear: both; visibility: hidden;
+}
+.formular .fc-error {
+	background: rgb(255, 234, 234); padding: 4px; border: 1px solid rgb(181, 184, 200); width: 350px; color: rgb(85, 85, 85); font-size: 12px; margin-bottom: 15px;
+}

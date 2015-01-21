@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div,span,p{
+		width: 140px;
+		height: 140px;
+		margin: 5px;
+		background: #aaa;
+		border: #000 1px solid;
+		float: left;
+		font-size: 17px;
+		font-family: Verdana;
+	}
+	div.mini{
+		width: 55px;
+		height: 55px;
+		background-color: #aaa;
+		font-size: 12px;
+	}
+	div.hide{
+		display: none;
+	}
+</style>
+<script type="text/javascript" src="../basic/jquery1.8.3.min.js"></script>
+</head>
+<body>
+	<div class="one" id="one">
+		id为one,class为one的div
+		<div class="mini">class为mini</div>
+	</div>
+	<div class="one" id="two" title="test">来
+		<div class="mini" title="other">class为mini title为other</div>
+		<div class="mini" title="test">class为mini title为test</div>
+	</div>
+	<div class = "one">
+		<div class="mini">
+			class为mini
+		</div>
+		<div class="mini">
+			class 为mini
+		</div>
+		<div class="mini">
+			class 为mini
+		</div>
+		<div class="mini"></div>
+	</div>
+	<div class="one">
+		<div class="mini">class 为mini</div>
+		<div class="mini">class 为mini</div>
+		<div class="mini">class 为mini</div>
+		<div class="mini" title="test">class 为mini,title为test</div>
+	</div>
+	<div style="display: none;" class="none">style的display为"none"的div
+	</div>
+	<div class="hide">class 为"hide"的div</div>
+	<div>
+		包含iput的type为“hide”的div<input type="hidden" size="8">
+	</div>
+	<span id="mover">正在执行动画的span元素.</span>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" href="../static/css/base.css">
+<link rel="stylesheet" href="../static/css/common.css">
+<link rel="stylesheet" href="../static/style/bootstrap3.css">
+<link rel="stylesheet" href="../static/style/doctype.css">
+<link rel="stylesheet" href="../validation/validationEngine.jquery.css">
+<link rel="stylesheet" href="../validation/template.css">
+<script type="text/javascript" src="../basic/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../validation/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="../validation/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="../static/js/personal.js"></script>
+<!-- <script type="te xt/javascript" src="../static/js/extends.js"></script> -->
+<script type="text/javascript" src="../basic/temp.js"></script>
+<script type="text/javascript">
+		var person1 = {
+			id:'1',
+			sex:'男'
+		}
+		var person2 = {
+			id:'2',
+			sex:'女'
+		}
+		var mixPerson = $.extend({},person1,person2);
+		$.initExtends =mixPerson;
+		console.log($.initExtends);
+		//进行深度的拷贝
+		var person3 = {
+			name:'john',
+			location:{
+				city:"Boston",
+				county:'USA'
+			}
+		}
+		var person4 = {
+			name:'Resig',
+			location:{
+				state:"MA",
+				county:"china"
+				}
+		}
+		var deepCopyPerson = $.extend(false,person3,person4);
+		console.log(deepCopyPerson);
+		var result=$.extend( false, {},  
+			{ name: "John", location:{city: "Boston",county:"USA"} },  
+			{ last: "Resig", location: {state: "MA",county:"China"} }  
+		); 
+		console.log(result);
+		var A = {
+			name:"123",
+			C:{
+				age:"55"
+			}
+		}
+		var B = {
+			name:"13",
+			C:{
+				sex:'gay'
+			}
+		}
+		var  AextendB = $.extend(false,A,B);
+		console.log(AextendB);		
+</script>
+	<style type="text/css">
+	.form-group {
+		float: left;
+		margin-left: 30px;
+	}
+	
+	.form-group-list {
+		float: left;
+		clear: both;
+		margin-top: 5px;
+		margin-left: 30px;
+	}
+	
+	.from-group-label {
+		margin-right: 40px;
+		width: 150px;
+	}
+	</style>
+<body>
+
+	<div class="col-infos">
+		<h2>
+			<i class="fa fa-bar-chart-o"></i>添加基金产品
+		</h2>
+	</div>
+	<form action="${ctx }/fund/saveorUpdatefund"
+		class="form-inline" id="mgFrm" method="post">
+		<div class="form-group" style="display: none;">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>id</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="title" name="title" class="form-control"
+					style="width: 250px;" maxlength="25"> <input type="hidden"
+					id="id" name="id" class="form-control" style="width: 250px;"
+					maxlength="25" value="${fund.id }">
+			</div>
+		</div>
+		<div style="display: none;">
+			<input type="hidden"  name="files" id="fund_file">
+			<input type="hidden" id="type_img" name="valueAndText"> 
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>基金项目名称</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="fundName" name="fundName"
+					class="form-control validate[required]" style="width: 250px;" maxlength="50"
+					 >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>募集金额</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="price" name="price"
+					class="form-control validate[required,custome[isNumberOr_OrLetterFirst]]" style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>年化收益</label>
+			<div style="float: right;margin-left: 10px;">
+					<input type="text" id="annualized" name="annualized"
+					class="form-control validate[required]" style="width: 250px;" maxlength="50" >%
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>回款方式</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="remittance" name="remittance"
+					class="form-control validate[required,custom[number]]" style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>期限</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="term" name="term"
+					class="form-control validate[required]" style="width: 250px;" maxlength="50" >月
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>法律形式</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="legal" name="legal"
+					class="form-control validate[required] " style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>基金总规模</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="fundSize" name="fundSize"
+					class="form-control validate[required] " style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>基金存续期</label>
+			<div style="float: right;margin-left: 10px;">
+			<input type="text" id="fundTime" name="fundTime"
+					class="form-control validate[required] " style="width: 250px;" maxlength="50" >月
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>基金管理人</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="fundTeam" name="fundTeam" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>有限合伙人</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="partner" name="partner" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50">
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>用款企业</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="fundsBusiness" name="fundsBusiness" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>托管银行</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="bank" name="bank" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>担保公司</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="company" name="company" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>认缴基金</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="subscribedFund" name="subscribedFund" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50" >元
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>基金类别</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="fundType" name="fundType" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>预期收益</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="expectedReturn" name="expectedReturn" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50">%
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>基金用途</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="fundsWay" name="fundsWay" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50" >
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>还款来源</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="repayment" name="repayment" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50" ">
+			</div>
+		</div>
+			<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>结束日期</label>
+			<div style="float: right;margin-left: 10px;">
+				<input type="text" id="endDate" name="endDate" class="form-control validate[required]"
+					style="width: 250px;" maxlength="50">
+			</div>
+		</div>
+		<div class="form-group-list">
+			<label for="" class="from-group-label"><font color="red"
+				style="text-align: center; padding-top: 3px;">*</font>保障措施</label>
+			<div style="float: right;margin-left: 10px;">
+					<textarea id="safeguards" name="safeguards" rows="10"   class="validate[required]" style="width: 500px;height: 100px; position: static" class="editMode"></textarea>
+			</div>
+		</div>
+	
+		<script type="text/javascript">
+			 $(document).ready(function(){
+	       	  var endDate = {
+				    elem: '#endDate',
+				    min: laydate.now(), //-1代表昨天，-2代表前天，以此类推
+				};
+			  laydate(endDate);
+	         });
+		</script>
+		<input id="fileUrl" type="hidden" name="fileUrl">
+		<div class="form-group-list" style="margin-left: 400px;">
+			<button type="button" class="btn btn-primary" onclick="save();">保存</button>
+		</div>
+	</form>
+</body>
+</html>

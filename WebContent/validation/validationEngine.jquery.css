@@ -1,0 +1,90 @@
+.formError {
+	z-index: 990;
+}
+.formError .formErrorContent {
+	z-index: 991;
+}
+.formError .formErrorArrow {
+	z-index: 996;
+}
+.formError.formErrorInsideDialog {
+	z-index: 5000;
+}
+.formError.formErrorInsideDialog .formErrorContent {
+	z-index: 5001;
+}
+.formError.formErrorInsideDialog .formErrorArrow {
+	z-index: 5006;
+}
+.inputContainer {
+	float: left; position: relative;
+}
+.formError {
+	left: 300px; top: 300px; display: block; position: absolute; cursor: pointer;
+}
+.ajaxSubmit {
+	background: rgb(85, 234, 85); padding: 20px; border: 1px solid rgb(153, 153, 153); display: none;
+}
+.formError .formErrorContent {
+	background: rgb(238, 1, 1); padding: 4px 10px; border-radius: 6px; border: 2px solid rgb(221, 221, 221); width: 150px; color: rgb(255, 255, 255); font-size: 11px; position: relative; box-shadow: 0px 0px 6px #000; -moz-box-shadow: 0 0 6px #000; -webkit-box-shadow: 0 0 6px #000; -moz-border-radius: 6px; -webkit-border-radius: 6px;
+}
+.greenPopup .formErrorContent {
+	background: rgb(51, 190, 64);
+}
+.blackPopup .formErrorContent {
+	background: rgb(57, 57, 57); color: rgb(255, 255, 255);
+}
+.formError .formErrorArrow {
+	margin: -2px 0px 0px 13px; width: 15px; position: relative;
+}
+body[dir='rtl'] .formError .formErrorArrow {
+	margin: -2px 13px 0px 0px;
+}
+body.rtl .formError .formErrorArrow {
+	margin: -2px 13px 0px 0px;
+}
+.formError .formErrorArrowBottom {
+	margin: 0px 0px 0px 12px; top: 2px; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+.formError .formErrorArrow div {
+	background: rgb(238, 1, 1); margin: 0px auto; height: 1px; line-height: 0; font-size: 0px; border-right-color: rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); border-right-width: 2px; border-left-width: 2px; border-right-style: solid; border-left-style: solid; display: block; box-shadow: 0px 2px 3px #444; -moz-box-shadow: 0 2px 3px #444; -webkit-box-shadow: 0 2px 3px #444;
+}
+.formError .formErrorArrowBottom div {
+	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+.greenPopup .formErrorArrow div {
+	background: rgb(51, 190, 64);
+}
+.blackPopup .formErrorArrow div {
+	background: rgb(57, 57, 57); color: rgb(255, 255, 255);
+}
+.formError .formErrorArrow .line10 {
+	border: currentColor; width: 15px;
+}
+.formError .formErrorArrow .line9 {
+	border: currentColor; width: 13px;
+}
+.formError .formErrorArrow .line8 {
+	width: 11px;
+}
+.formError .formErrorArrow .line7 {
+	width: 9px;
+}
+.formError .formErrorArrow .line6 {
+	width: 7px;
+}
+.formError .formErrorArrow .line5 {
+	width: 5px;
+}
+.formError .formErrorArrow .line4 {
+	width: 3px;
+}
+.formError .formErrorArrow .line3 {
+	width: 1px; border-right-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); border-right-width: 2px; border-bottom-width: 0px; border-left-width: 2px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
+}
+.formError .formErrorArrow .line2 {
+	background: rgb(221, 221, 221); border: currentColor; width: 3px;
+}
+.formError .formErrorArrow .line1 {
+	background: rgb(221, 221, 221); border: currentColor; width: 1px;
+}

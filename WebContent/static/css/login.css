@@ -1,0 +1,44 @@
+@charset "utf-8";
+.login_main{background:#f9f9f9;padding:70px 0;}
+.login_main .w980{background:#fff;min-height:463px;}
+.login_l{width:640px;height:463px;background:url(../images/login_l_bg.jpg) 132px 92px no-repeat}
+.login_l img{margin:92px 0 0 132px;}
+.login_r{width:262px;margin-right:73px;padding-top:30px;}
+.showTip{height:50px;line-height:50px;text-align:center;font-size:13.3px;color:#cf000e;}
+.login_cell{height:45px;margin-bottom:20px;position:relative;}
+.login_cell b{position:absolute;font-weight:normal;font-size:14px;color:#999;left:50px;top:10px;}
+.login_cell .txt{height:38px;line-height:36px;width:213px;border:1px solid #b6b6b6;font-size:14px;color:#333;padding-left:47px;}
+.name_txt{background:url(../images/name_icon.jpg) 10px 0 no-repeat;}
+.password_txt{background:url(../images/password_icon.jpg) 10px 0 no-repeat;}
+.yzm_txt{background:url(../images/yzm_icon.jpg) 10px 0 no-repeat;}
+.login_cell .yzm_txt{width:107px;}
+.login_cell img{margin-left:23px;margin-top:-4px;*+margin-top:-21px;cursor:pointer;}
+.login_cell label{float:left;line-height:40px;color:#666;font-size:14px;}
+.check_inp{vertical-align:middle;margin-top:-2px;}
+.forget_possword{float:right;line-height:40px;color:#cf000e;font-size:14px}
+.login_cell .but{height:43px;line-height:41px;border:0;font-size:18px;color:#fff;cursor:pointer;}
+.login_cell .but:hover{opacity:0.8;filter:alpha(opacity=80);}
+.login_but{width:130px;background:#cf000e;}
+.sign_but{width:110px;background:#b47f32;}
+
+/*注册*/
+.register_main{background:#f9f9f9;padding-top:70px;}
+.register_main .w980{padding-top:60px;width:980px;min-height:463px;background:#fff url(../images/register_bg.jpg) 638px 155px no-repeat;}
+.register_cell{height:40px;line-height:40px;margin-bottom:20px;}
+.register_cell span{float:left;width:123px;line-height:40px;font-size:14.5px;color:#373737;text-align:right;}
+.register_cell span i{color:#cf000e;font-size:14.5px;font-family:"宋体";margin-right:7px;}
+.register_cell .txt{margin-left:10px;float:left;height:38px;line-hieght:38px;width:232px;border:1px solid #b8b8b8;padding-left:37px;}
+.error{color:red;line-height:40px;margin-left:20px;float:left;color:#cf000e;font-size:13.3px;}
+.check_box{padding-left:110px;font-size:14px;}
+.check_box label{font-size:14px;color:#373737;}
+.check_box a{color:#cf000e;}
+.phone_txt{background:url(../images/phone_bg.jpg) 10px 0 no-repeat;}
+.nowregister{margin-left:137px;height:43px;line-height:42px;width:173px;background:#cf000e;font-size:18.5px;color:#fff;border:0;text-align:center;}
+
+
+
+
+
+
+
+

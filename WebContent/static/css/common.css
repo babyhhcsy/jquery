@@ -1,0 +1,60 @@
+@charset "utf-8";
+.w980{width:980px;margin:0 auto;}
+.nav_box{height:50px;padding-top:22px;background:#fff;border-bottom:1px solid #ccc;}
+.nav li{float:left;margin-left:45px;position:relative;padding-right:5px;cursor:pointer;}
+.nav li:hover .second_nav{display:block;}
+.nav_icon1{width:9px;height:8px;background:url(../images/nav_icon1.jpg) no-repeat;right:-8px;top:18px;}
+.nav_link{height:50px;line-height:45px;float:left;font-size:17px;color:#000;position:relative;}
+.nav_link:hover{text-decoration:none;}
+.second_nav{display:none;background:#fff;border-radius:3px;border:1px solid #e3e3e3;width:120px;text-align:center;padding:5px 0;top:48px;left:50%;margin-left:-60px;z-index:3;}
+.second_nav a{display:block;line-height:30px;color:#000;font-size:16px;}
+.nac_icon2{width:15px;height:13px;background:url(../images/nav_icon2.jpg) no-repeat;top:-13px;left:50%;margin-left:-7px;}
+/****banner*****/
+.banner{overflow:hidden;width:100%;height:303px;position:relative;}
+.banner .hd{position:absolute;z-index:2;bottom:10px;left:50%;margin-left:-40px;}
+.banner .hd li{width:15px;height:15px;background:#fff;margin-left:10px;cursor:pointer;float:left;border-radius:50%;}
+.banner .hd .active{background:#cf000d;}
+.banner .bd li{width:100%;height:303px;}
+.banner1{background:url(../images/banner1.jpg) center center no-repeat;background-size:cover;}
+.banner2{background:url(../images/banner2.jpg) center center no-repeat;background-size:cover;}
+.banner3{background:url(../images/banner3.jpg) center center no-repeat;background-size:cover;}
+/*****footer******/
+.footer{background:#909090;height:210px;padding-top:34px;}
+.footer span,.footer a,.footer p{color:#fff;font-size:14px;}
+.footer_left{width:155px;text-align:center;}
+.footer_left img{width:155px;height:155px;margin-bottom:5px;}
+.footer_right{margin-left:32px;width:765px;}
+.footer_right .hd{padding-bottom:30px;border-bottom:1px solid #828484;}
+.footer_right a{margin-left:17px;}
+.footer_right .bd{margin-top:40px;}
+.footer_right .p2{padding-left:24px;background:url(../images/footer_icon.png) 0 1px no-repeat;}
+.footer_right .ft{margin-top:25px;}
+.footer_right .s2 span{font-size:30px;font-weight:bold;}
+.footer_right input{border:0;cursor:pointer;color:#fff;font-size:13px;height:25px;line-height:23px;margin-right:20px;}
+.wx_but{width:71px;padding-left:33px;background:url(../images/wenxin_icon.jpg) no-repeat;}
+.wx_but:hover{background:url(../images/wenxin_hover.jpg) no-repeat;}
+.zxkf_but{width:97px;padding-left:30px;border:0;background:url(../images/zxkf_icon.jpg) no-repeat;}
+.zxkf_but:hover{background:url(../images/zxkf_hover.jpg) no-repeat;}
+/****百分比*****/
+.stat_bd .p1{color:#444;font-size:13px;margin-top:20px;}
+.percent1{font-size:26px;}
+.percent1 span{color:#cf000e;font-size:53px;margin-right:5px;}
+/****按钮*****/
+.but_common{border:0;width:156px;height:38px;line-height:36px;text-align:center;cursor:pointer;border-radius:4px;font-size:16px;color:#fff;}
+.but_common:hover{opacity:0.8;filter:alpha(opacity=80);}
+.red_but{background:#cf000e;}
+.b47f32_but{background:#b47f32;}
+.but_disable{background:#909090;cursor:auto;}
+.but_disable:hover{opacity:1;filter:alpah(opacity=100);}
+/**计算进度**/
+.compute_box{margin-top:3px;display:inline-block;*display:inline;font-size:0;width:300px;height:12px;border-radius:12px;background:#dbdbdb;top:2px;}
+.compute_qian{display:inline-block;*display:inline;position:absolute;font-size:0;left:0;top:0;background:#b47f32;border-radius:12px;height:12px;width:30px;}
+/**分页**/
+.common_page{margin:15px 0;height:32px;text-align:right;clear:both;float: right;}
+.common_page li{float:left;margin-right:10px;width:38px;border:1px solid #ccc;text-align:center;line-height:28px;height:28px;border-radius:3px;background:url(../images/lp_page_bg.jpg) repeat-x;}
+.common_page li a{float:left;width:38px;color:#555;height:28px;}
+.common_page .active{background:#ec4d22;border:1px solid #ec4d22;}
+.common_page .active a{color:#FFF;}
+.common_page .active span{color:#fff;}
+.common_page .first{font-size:0;display:inline-block;overflow:hidden;border-left:7px dashed transparent;border-bottom:7px dashed transparent;border-right:7px solid #7e7e7e;border-top:7px dashed transparent;margin:8px 0 0 -8px;}
+.common_page .last{font-size:0;display:inline-block;overflow:hidden;border-left:7px solid #7e7e7e;border-bottom:7px dashed transparent;border-right:7px dashed transparent;border-top:7px dashed transparent;margin:8px 0 0 8px;}
